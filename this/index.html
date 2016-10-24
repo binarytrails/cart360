@@ -319,7 +319,7 @@
 
             <p class="header">Circuit</p>
             <p>
-                To move the magnet, I used the <a href="https://www.sparkfun.com/products/10976">Slide Pot</a> motorized slider with a combination of a H-Bridge to control its direction by altering a Direct Current :
+                To move the magnet, I used the <a href="https://www.sparkfun.com/products/10976">Slide Pot</a> motorized slider with a combination of a H-Bridge Microchip with diodes to control its direction by altering a Direct Current :
             </p>
             <div class="images">
                 <a href="images/circuit-1.jpg">
@@ -327,7 +327,30 @@
                 </a>
             </div>
             <p>
-                I found an online schematic of this motor :
+                The microchip is a <a href="http://www.microchip.com/wwwproducts/en/TC4424">TC4424</a> model :
+            </p>
+            <div class="images">
+                <a href="images/circuit-hbridge-tc4424.png">
+                    <img src="images/circuit-hbridge-tc4424.png"></img>
+                </a>
+            </div>
+            <p>
+                The circuit uses diodes to prevent a higher voltage than an Arduino can handle to come at it from the slider motor power supply. In our cases, we use 9V for the motor and 4.5V for the Arduino. If one does not use diodes, the current may burn the Arduino pins. Here is how the circuit without the slider motor looks like :
+            </p>
+            <div class="images">
+                <a href="images/circuit-schema.png">
+                    <img src="images/circuit-schema.png"></img>
+                </a>
+                <a href="images/circuit-bread-partial.png">
+                    <img src="images/circuit-bread-partial.png"></img>
+                </a>
+            </div>
+            <p>
+                The Slide Pot would have to be connected between the top two diodes and their horizontal wires going to the Microchip. I didn't connect those since the exact Slide Pot model wasn't found in the Fritzing software used to draw the schemas. The latter was also the case for the TC4424 Mircochip but it is less important because their pins seems to match between these models.
+                </br></br>
+                Here is the Fritzing <a href="circuit.fzz">circuit file</a>.
+                </br></br>
+                For the Slide Pot, I found an online schematic of this motor :
             </p>
             <div class="images">
                 <a href="images/circuit.jpg">
