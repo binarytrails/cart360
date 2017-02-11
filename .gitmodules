@@ -1,0 +1,3 @@
+[submodule "hackerpot"]
+	path = hackerpot
+	url = https://github.com/sevaivanov/hackerpot
